@@ -70,6 +70,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 5
 
+-- shared data file settings
+vim.opt.shada = { "!,'1000,<1000,s100,h" }
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
