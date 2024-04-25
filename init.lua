@@ -72,6 +72,9 @@ vim.opt.scrolloff = 5
 
 -- shared data file settings
 vim.opt.shada = { "!,'1000,<1000,s100,h" }
+
+vim.opt.backup = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
