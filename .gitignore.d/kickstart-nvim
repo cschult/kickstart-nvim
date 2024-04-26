@@ -1,0 +1,8 @@
+*
+!/.config
+!/.config/nvim
+!/.config/nvim/**
+.config/nvim/*~
+.config/nvim/**/*~
+!/.gitignore.d
+!/.gitignore.d/kickstart-nvim
