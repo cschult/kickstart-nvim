@@ -39,6 +39,8 @@ map('n', '<leader>tT', 'Go<cr>#türkisch<esc>:le4<cr>', { desc = 'tag recipe tü
 map('n', '<leader>tl', 'Go<cr>#levante<esc>:le4<cr>', { desc = 'tag recipe levante' })
 map('n', '<leader>to', 'Go<cr>#ostern<esc>:le4<cr>', { desc = 'tag recipe Ostern' })
 map('n', '<leader>tr', 'Go<cr>#raclette<esc>:le4<cr>', { desc = 'tag recipe Raclette' })
+map('n', '<leader>tk', 'Go<cr>#kuchen<esc>:le4<cr>', { desc = 'tag recipe Kuchen' })
+map('n', '<leader>ts', 'Go<cr>#salat<esc>:le4<cr>', { desc = 'tag recipe Salat' })
 -- InsGitHeader comes from usercmds.lua
 map('n', '<leader>ii', '<cmd>InsGitHeader<cr>', { desc = 'insert git header' })
 map('n', '<leader>X', '<cmd>!chmod u+x %<cr>', { desc = 'file make executable' })
