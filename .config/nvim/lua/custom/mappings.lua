@@ -34,6 +34,7 @@ map('n', '<leader>tA', 'Go<cr>#alkohol<esc>:le4<cr>', { desc = 'tag recipe Alkoh
 map('n', '<leader>ta', 'Go<cr>#asiatisch<esc>:le4<cr>', { desc = 'tag recipe asiatisch' })
 map('n', '<leader>tc', 'Go<cr>#chinesisch<esc>:le4<cr>', { desc = 'tag recipe chinesisch' })
 map('n', '<leader>ti', 'Go<cr>#indisch<esc>:le4<cr>', { desc = 'tag recipe indisch' })
+map('n', '<leader>tI', 'Go<cr>#italienisch<esc>:le4<cr>', { desc = 'tag recipe italienisch' })
 map('n', '<leader>tt', 'Go<cr>#thailändisch<esc>:le4<cr>', { desc = 'tag recipe thailändisch' })
 map('n', '<leader>tT', 'Go<cr>#türkisch<esc>:le4<cr>', { desc = 'tag recipe türkisch' })
 map('n', '<leader>tl', 'Go<cr>#levante<esc>:le4<cr>', { desc = 'tag recipe levante' })
