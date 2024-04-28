@@ -85,3 +85,8 @@ if status_ok then
   map('t', '<C-l>', [[<Cmd>wincmd l<CR>]], { desc = 'go to window right' })
   map('t', '<C-w>', [[<C-\><C-n><C-w>]], { desc = 'enter wincmd' })
 end
+
+status_ok, _ = pcall(require, 'oil')
+if status_ok then
+  vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+end
