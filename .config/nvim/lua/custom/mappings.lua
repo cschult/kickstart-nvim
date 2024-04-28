@@ -73,3 +73,15 @@ if status_ok then
   map('n', '<leader>stf', '<cmd>TodoTelescope keywords=FIX,FIXME,BUG,ISSUE,FIXIT<cr>', { desc = 'todo: find fixme comments' })
   map('n', '<leader>stn', '<cmd>TodoTelescope keywords=NOTE,INFO<cr>', { desc = 'todo: find note comments' })
 end
+
+status_ok, _ = pcall(require, 'toggleterm')
+if status_ok then
+  map('n', '<leader>t', '<cmd>ToggleTerm<cr>', { desc = 'open/close terminal' })
+  map('t', '<esc>', [[<C-\><C-n>]], { desc = 'terminal escape' })
+  map('t', 'jk', [[<C-\><C-n>]], { desc = 'terminal escape' })
+  map('t', '<C-h>', [[<Cmd>wincmd h<CR>]], { desc = 'go to window left' })
+  map('t', '<C-j>', [[<Cmd>wincmd j<CR>]], { desc = 'go to window down' })
+  map('t', '<C-k>', [[<Cmd>wincmd k<CR>]], { desc = 'go to window up' })
+  map('t', '<C-l>', [[<Cmd>wincmd l<CR>]], { desc = 'go to window right' })
+  map('t', '<C-w>', [[<C-\><C-n><C-w>]], { desc = 'enter wincmd' })
+end
