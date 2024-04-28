@@ -46,6 +46,12 @@ map('n', '<leader>ts', 'Go<cr>#salat<esc>:le4<cr>', { desc = 'tag recipe Salat' 
 map('n', '<leader>ii', '<cmd>InsGitHeader<cr>', { desc = 'insert git header' })
 map('n', '<leader>X', '<cmd>!chmod u+x %<cr>', { desc = 'file make executable' })
 
+-- Make adjusting split sizes more friendly
+map('n', '<c-right>', ':vertical :resize +3<cr>', { desc = 'split resize vertical +3' })
+map('n', '<c-left>', ':vertical :resize -3<cr>', { desc = 'split resize vertical -3' })
+map('n', '<c-up>', ':resize +3<cr>', { desc = 'split resize horizontal +3' })
+map('n', '<c-down>', ':resize -3<cr>', { desc = 'split resize horizontal -3' })
+
 -- CopyPasteComment is from usercmds.lua
 -- mini.comment comes with kickstart-nvim
 local status_ok, _ = pcall(require, 'mini.comment')
