@@ -203,4 +203,9 @@ return {
       { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
     },
   },
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    config = true,
+  },
 }
