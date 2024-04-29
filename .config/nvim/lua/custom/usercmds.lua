@@ -5,8 +5,8 @@ vim.api.nvim_create_user_command('InsGitHeader', function()
   local cLeft, cRight
   local gcc = require 'custom.helper.get-comment-chars'
   cLeft, cRight = gcc.get_comment_chars()
-  -- if cRight ~= '' then
-  if cRight then
+  if cRight ~= '' then
+    -- if cRight then
     cRight = ' ' .. cRight
   end
   if not cLeft then
