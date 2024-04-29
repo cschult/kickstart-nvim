@@ -1,3 +1,4 @@
+---------------
 -- InsGitHeader
 vim.api.nvim_create_user_command('InsGitHeader', function()
   -- Funktionsaufrufe hier
@@ -34,8 +35,12 @@ vim.api.nvim_create_user_command('InsGitHeader', function()
   vim.api.nvim_buf_set_lines(0, 0, 0, false, { line1, line2, line3, newline })
 end, { bang = true, desc = 'insert git header' })
 
+-------------------
 -- CopyPasteComment
-vim.api.nvim_create_user_command('CopyPasteComment', function()
-  -- gcc is from plugin "Comment.nvim"
-  vim.cmd.normal 'yypkgccj'
-end, { bang = true, desc = 'Copy line and comment origin' })
+-- gcc is from plugin "Comment.nvim"
+local status_ok, _ = pcall(require, 'Comment')
+if status_ok then
+  vim.api.nvim_create_user_command('CopyPasteComment', function()
+    vim.cmd.normal 'yypkgccj'
+  end, { bang = true, desc = 'Copy line and comment origin' })
+end
