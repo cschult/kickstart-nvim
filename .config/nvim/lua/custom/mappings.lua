@@ -77,7 +77,7 @@ end
 status_ok, _ = pcall(require, 'toggleterm')
 if status_ok then
   map('n', '<leader>t', '<cmd>ToggleTerm<cr>', { desc = 'open/close terminal' })
-  map('t', '<esc>', [[<C-\><C-n>]], { desc = 'terminal escape' })
+  -- map('t', '<esc>', [[<C-\><C-n>]], { desc = 'terminal escape' })
   map('t', 'jk', [[<C-\><C-n>]], { desc = 'terminal escape' })
   map('t', '<C-h>', [[<Cmd>wincmd h<CR>]], { desc = 'go to window left' })
   map('t', '<C-j>', [[<Cmd>wincmd j<CR>]], { desc = 'go to window down' })
