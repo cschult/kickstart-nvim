@@ -3,32 +3,32 @@
 vim.api.nvim_create_user_command('InsGitHeader', function()
   -- Funktionsaufrufe hier
   -- 1. Kommentarzeichen festlegen
-  local cLeft, cRight
+  local cleft, cright
   local gcc = require 'custom.helper.get-comment-chars'
-  cLeft, cRight = gcc.get_comment_chars()
-  if cRight ~= '' then
-    -- if cRight then
-    cRight = ' ' .. cRight
+  cleft, cright = gcc.get_comment_chars()
+  if cright ~= '' then
+    -- if cright then
+    cright = ' ' .. cright
   end
-  if not cLeft then
-    cLeft = '#'
+  if not cleft then
+    cleft = '#'
   end
   -- 2. Dateinamen festlegen
   local gfn = require 'custom.helper.get-file-name'
   local fname = gfn.get_file_name()
-  local line1 = cLeft .. ' file: ' .. fname .. cRight
+  local line1 = cleft .. ' file: ' .. fname .. cright
   -- 3. Repo-Namen festlegen
   local grn = require 'custom.helper.get-repo-name'
   local repo = grn.get_repo_name()
   local line2
   if repo then
-    line2 = cLeft .. ' git: ' .. repo .. cRight
+    line2 = cleft .. ' git: ' .. repo .. cright
   else
-    line2 = cLeft .. cRight
+    line2 = cleft .. cright
   end
   -- 4. Autor-Zeile festlegen
   local year = os.date '%Y'
-  local line3 = cLeft .. ' author: Christian Schult <cschult@devmem.de> ' .. year .. cRight
+  local line3 = cleft .. ' author: Christian Schult <cschult@devmem.de> ' .. year .. cright
   -- empty line
   local newline = ''
   -- 5. alles ausgeben auf mehreren Zeilen
