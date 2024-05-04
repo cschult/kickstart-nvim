@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+local status_ok
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
@@ -54,7 +55,7 @@ map('n', '<c-down>', ':resize -3<cr>', { desc = 'split resize horizontal -3' })
 
 -- CopyPasteComment is from usercmds.lua
 -- mini.comment comes with kickstart-nvim
-local status_ok, _ = pcall(require, 'mini.comment')
+status_ok, _ = pcall(require, 'mini.comment')
 if status_ok then
   map('n', '<leader>yy', '<cmd>CopyPasteComment<cr>', { desc = 'line copy & paste, preserve as comment' })
 end
