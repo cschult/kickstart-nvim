@@ -336,4 +336,15 @@ return {
       require('alpha').setup(require('alpha.themes.startify').config)
     end,
   },
+  {
+    -- url = 'ssh://devmem.de/srv/git/insgitheader.nvim',
+    'cschult/insgitheader.nvim',
+    -- dir = '~/git/insgitheader.nvim/',
+    lazy = false,
+    -- branch = 'develop',
+    opts = {
+      name = 'Christian Schult',
+      email = 'cschult@demem.de',
+    },
+  },
 }
