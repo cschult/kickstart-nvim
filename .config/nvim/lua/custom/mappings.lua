@@ -43,8 +43,13 @@ map('n', '<leader>To', 'Go<cr>#ostern<esc>:le4<cr>', { desc = 'tag recipe Ostern
 map('n', '<leader>Tr', 'Go<cr>#raclette<esc>:le4<cr>', { desc = 'tag recipe Raclette' })
 map('n', '<leader>Tk', 'Go<cr>#kuchen<esc>:le4<cr>', { desc = 'tag recipe Kuchen' })
 map('n', '<leader>Ts', 'Go<cr>#salat<esc>:le4<cr>', { desc = 'tag recipe Salat' })
--- InsGitHeader comes from usercmds.lua
-map('n', '<leader>ii', '<cmd>InsGitHeader<cr>', { desc = 'insert git header' })
+
+-- keymap for plugin insgitheader
+status_ok, _ = pcall(require, 'insgitheader')
+if status_ok then
+  map('n', '<leader>ii', '<cmd>InsGitHeader<cr>', { desc = 'insert git header' })
+end
+
 map('n', '<leader>X', '<cmd>!chmod u+x %<cr>', { desc = 'file make executable' })
 
 -- Make adjusting split sizes more friendly
