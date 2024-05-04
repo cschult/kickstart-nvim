@@ -347,4 +347,7 @@ return {
       email = 'cschult@demem.de',
     },
   },
+  {
+    'tweekmonster/helpful.vim',
+  },
 }
