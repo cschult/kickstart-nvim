@@ -894,5 +894,11 @@ require 'custom.mappings'
 require 'custom.abbrevs'
 require 'custom.autocmds'
 
+-- pretty print tables, from TJDeFries
+P = function(v)
+  print(vim.inspect(v))
+  return v
+end
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
