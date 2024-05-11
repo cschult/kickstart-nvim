@@ -94,3 +94,23 @@ status_ok, _ = pcall(require, 'oil')
 if status_ok then
   vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 end
+
+status_ok, _ = pcall(require, 'bufferline')
+if status_ok then
+  map('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'bufferline cycle to next buffer in bufferline' })
+  map('n', '<s-Tab>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'bufferline cycle to previous buffer in bufferline' })
+  map('n', '<Leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { desc = 'bufferline goto buffer 1' })
+  map('n', '<Leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', { desc = 'bufferline goto buffer 2' })
+  map('n', '<Leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', { desc = 'bufferline goto buffer 3' })
+  map('n', '<Leader>4', '<Cmd>BufferLineGoToBuffer 4<CR>', { desc = 'bufferline goto buffer 4' })
+  map('n', '<Leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', { desc = 'bufferline goto buffer 5' })
+  map('n', '<Leader>6', '<Cmd>BufferLineGoToBuffer 6<CR>', { desc = 'bufferline goto buffer 6' })
+  map('n', '<Leader>7', '<Cmd>BufferLineGoToBuffer 7<CR>', { desc = 'bufferline goto buffer 7' })
+  map('n', '<Leader>8', '<Cmd>BufferLineGoToBuffer 8<CR>', { desc = 'bufferline goto buffer 8' })
+  map('n', '<Leader>9', '<Cmd>BufferLineGoToBuffer 9<CR>', { desc = 'bufferline goto buffer 9' })
+  map('n', '<Leader>0', '<Cmd>BufferLineGoToBuffer 0<CR>', { desc = 'bufferline goto buffer 10' })
+  map('n', ',bmr', '<Cmd>BufferLineMoveNext<CR>', { desc = 'bufferline move buffer right' })
+  map('n', ',bml', '<Cmd>BufferLineMovePrev<CR>', { desc = 'bufferline move buffer left' })
+  map('n', ',bm1', '<Cmd>:lua require"bufferline".move_to(1)<CR>', { desc = 'bufferline move buffer to first position' })
+  map('n', ',bm$', '<Cmd>:lua require"bufferline".move_to(-1)<CR>', { desc = 'bufferline move buffer to last position' })
+end
