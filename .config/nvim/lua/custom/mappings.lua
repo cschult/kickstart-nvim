@@ -21,8 +21,6 @@ map('n', '<leader>"', '<cmd>vsplit<cr>', { desc = 'Buffer split horizontal' })
 map('n', '<leader>%', '<cmd>split<cr>', { desc = 'Buffer split vertical' })
 map('n', 'Q', 'gq', { desc = 'wrap current paragraph' })
 map('v', 'Q', 'gq', { desc = 'wrap current selection' })
-map('n', '+', '<C-a>', { desc = 'number increment' })
-map('n', '-', '<C-x>', { desc = 'number decrement' })
 map('v', '<', '<gv', { desc = 'Move selection to the left' })
 map('v', '>', '>gv', { desc = 'Move selection to the right' })
 -- insert tags for food recipes
