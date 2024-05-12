@@ -109,8 +109,8 @@ if status_ok then
   map('n', '<Leader>8', '<Cmd>BufferLineGoToBuffer 8<CR>', { desc = 'bufferline goto buffer 8' })
   map('n', '<Leader>9', '<Cmd>BufferLineGoToBuffer 9<CR>', { desc = 'bufferline goto buffer 9' })
   map('n', '<Leader>0', '<Cmd>BufferLineGoToBuffer 0<CR>', { desc = 'bufferline goto buffer 10' })
-  map('n', ',bmr', '<Cmd>BufferLineMoveNext<CR>', { desc = 'bufferline move buffer right' })
-  map('n', ',bml', '<Cmd>BufferLineMovePrev<CR>', { desc = 'bufferline move buffer left' })
-  map('n', ',bm1', '<Cmd>:lua require"bufferline".move_to(1)<CR>', { desc = 'bufferline move buffer to first position' })
-  map('n', ',bm$', '<Cmd>:lua require"bufferline".move_to(-1)<CR>', { desc = 'bufferline move buffer to last position' })
+  map('n', ',bh', '<Cmd>BufferLineMovePrev<CR>', { desc = 'bufferline move buffer left' })
+  map('n', ',bl', '<Cmd>BufferLineMoveNext<CR>', { desc = 'bufferline move buffer right' })
+  map('n', ',b1', '<Cmd>:lua require"bufferline".move_to(1)<CR>', { desc = 'bufferline move buffer to first position' })
+  map('n', ',b$', '<Cmd>:lua require"bufferline".move_to(-1)<CR>', { desc = 'bufferline move buffer to last position' })
 end
