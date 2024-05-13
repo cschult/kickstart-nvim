@@ -18,9 +18,10 @@ return {
     -- leave insert mode with "jk" or "jj"
     'max397574/better-escape.nvim',
     event = 'InsertEnter',
-    config = function()
-      require('better_escape').setup()
-    end,
+    config = true,
+    -- config = function()
+    -- require('better_escape').setup()
+    -- end,
   },
   {
     'barrett-ruth/live-server.nvim',
@@ -75,7 +76,7 @@ return {
     'ziontee113/color-picker.nvim',
     -- lazy = false,
     ft = { 'css', 'javascript', 'html' },
-    opts = {},
+    config = true,
     keys = {
       {
         mode = { 'n' },
@@ -113,9 +114,10 @@ return {
   {
     'declancm/maximize.nvim',
     event = 'VeryLazy',
-    config = function()
-      require('maximize').setup()
-    end,
+    config = true,
+    -- config = function()
+    --   require('maximize').setup()
+    -- end,
     keys = {
       {
         '<leader>z',
@@ -170,7 +172,7 @@ return {
     dependencies = {
       'smoka7/hydra.nvim',
     },
-    opts = {},
+    config = true,
     cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
     keys = {
       {
@@ -184,7 +186,7 @@ return {
   {
     'delphinus/characterize.nvim',
     lazy = false,
-    opts = {},
+    config = true,
   },
   {
     'jiaoshijie/undotree',
@@ -239,7 +241,7 @@ return {
   },
   {
     'stevearc/oil.nvim',
-    opts = {},
+    config = true,
     -- Optional dependencies
     dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
